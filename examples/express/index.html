@@ -4,8 +4,8 @@
 <script type="text/javascript">
     DNode.connect(function (remote) {
         remote.cat(function (says) {
-            document.getElementById('says').innerHTML
-                = says;
+            var elem = document.getElementById('says');
+            elem.innerHTML = says;
         });
     });
 </script>

@@ -1,6 +1,6 @@
 var connect = require('connect');
-var webserver = connect.createServer();
-webserver.use(connect.static(__dirname));
+var server = connect.createServer();
+server.use(connect.static(__dirname));
 
 var dnode = require('dnode');
 
@@ -8,6 +8,6 @@ dnode(function (client) {
     this.cat = function (cb) {
         cb('meow');
     };
-}).listen(webserver);
+}).listen(server);
 
-webserver.listen(8080);
+server.listen(8080);
