@@ -8,6 +8,22 @@ function choose (serverType, opts) {
     var ex = examples[t];
     $('#client .console').text(ex && ex.client || '');
     $('#server .console').text(ex && ex.server || '');
+    
+    if (opts.browserify || examples[serverType + '-browserify']) {
+        $('#browserify-label').show();
+    }
+    else {
+        $('#browserify-label').hide();
+    }
+    
+    if (opts.jquery
+    || examples[serverType + '-jquery']
+    || examples[t + '-jquery']) {
+        $('#jquery-label').show();
+    }
+    else {
+        $('#jquery-label').hide();
+    }
 }
 
 $(window).load(function () {
