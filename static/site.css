@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(124, 188, 50);
+    margin: 0px;
+}
+
+#header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 860px;
+    height: 280px;
+}
+
+#header-image {
+    margin-top: -35px;
+}
+
+#remote-functions {
+    font-size: 18pt;
+    margin-top: -100px;
+    margin-left: 75px;
+}
+
+#backend {
+    margin-left: 30px;
+}
+
+#frontend {
+    margin-left: 60px;
+}
+
+#examples {
+    margin: auto;
+    width: 830px;
+    background-color: rgb(154, 208, 60);
+    height: 390px;
+}
+
+#examples select {
+    margin-left: 10px;
+}
+
+.console {
+    width: 380px;
+    height: 330px;
+    padding: 10px;
+    background-color: rgb(40, 60, 20);
+    color: white;
+    white-space: pre;
+    font-family: monospace;
+}
+
+.console-title {
+    font-size: 16pt;
+}
+
+#client {
+    float: left;
+    margin-left: 10px;
+}
+
+#server {
+    float: right;
+    margin-right: 10px;
+}

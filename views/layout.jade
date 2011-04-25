@@ -1,0 +1,20 @@
+!!!
+html(lang='en')
+  head
+    title dnode. freestyle rpc
+    link(rel='stylesheet', href='/site.css')
+    - if (typeof examples !== 'undefined') {
+      script(type='text/javascript')
+        var examples = !{examples};
+    - }
+    script(type='text/javascript', src='/browserify.js')
+  body
+    div#header
+      div#header-image
+        img(src='/dnode.png', width=860, height=279, alt='dnode')
+      div#remote-functions
+        div Call remote functions
+        div#backend on your backend
+        div#frontend and your frontend.
+    div#content
+      !{body}
