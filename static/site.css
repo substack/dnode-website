@@ -11,13 +11,13 @@ body {
 }
 
 #header-image {
-    margin-top: -35px;
 }
 
 #remote-functions {
+    position: fixed;
+    top: 10px;
+    margin-left: 20px;
     font-size: 18pt;
-    margin-top: -100px;
-    margin-left: 75px;
 }
 
 #backend {
@@ -30,7 +30,8 @@ body {
 
 #examples {
     margin: auto;
-    width: 830px;
+    margin-top: 20px;
+    width: 950px;
     background-color: rgb(154, 208, 60);
     height: 390px;
 }
@@ -40,13 +41,14 @@ body {
 }
 
 .console {
-    width: 380px;
+    width: 440px;
     height: 330px;
     padding: 10px;
     background-color: rgb(40, 60, 20);
     color: white;
     white-space: pre;
     font-family: monospace;
+    font-size: 10pt;
     overflow: auto;
 }
 
