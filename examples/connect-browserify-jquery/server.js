@@ -1,11 +1,11 @@
-var express = require('express');
-var app = express.createServer();
+var connect = require('connect');
+var server = connect.createServer();
 
 var browserify = require('browserify');
 var dnode = require('dnode');
 
-app.use(express.static(__dirname));
-app.use(browserify({
+server.use(connect.static(__dirname));
+server.use(browserify({
     require : [ 'dnode', 'jquery-browserify' ]
 }));
 
@@ -13,6 +13,6 @@ dnode(function (client) {
     this.cat = function (cb) {
         cb('meow');
     };
-}).listen(app);
+}).listen(server);
 
-app.listen(8080);
+server.listen(8080);
