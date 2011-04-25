@@ -47,6 +47,7 @@ body {
     color: white;
     white-space: pre;
     font-family: monospace;
+    overflow: auto;
 }
 
 .console-title {

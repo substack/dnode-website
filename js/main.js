@@ -6,10 +6,22 @@ function choose (serverType, opts) {
     if (opts.jquery) t += '-jquery';
     
     var ex = examples[t];
+    if (!ex && opts.browserify) {
+        $('#browserify').attr('checked', false);
+        opts.browserify = false;
+        return choose(serverType, opts);
+    }
+    if (!ex && opts.jquery) {
+        $('#jquery').attr('checked', false);
+        opts.jquery = false;
+        return choose(serverType, opts);
+    }
+    
     $('#client .console').text(ex && ex.client || '');
     $('#server .console').text(ex && ex.server || '');
     
-    if (opts.browserify || examples[serverType + '-browserify']) {
+    if (opts.browserify
+    || examples[serverType + '-browserify']) {
         $('#browserify-label').show();
     }
     else {
